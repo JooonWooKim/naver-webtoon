@@ -1,6 +1,7 @@
 package project.webtoon.domain.account.entity;
 
 import lombok.*;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import project.webtoon.global.dto.memberSignUpRequest;
 
 import javax.persistence.*;
