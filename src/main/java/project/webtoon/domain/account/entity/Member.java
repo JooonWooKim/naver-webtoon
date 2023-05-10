@@ -1,6 +1,7 @@
 package project.webtoon.domain.account.entity;
 
 import lombok.*;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import project.webtoon.global.dto.memberSignUpRequest;
 
 import javax.persistence.*;
@@ -20,7 +21,7 @@ public class Member {
     private String password;
     private int cookieCount;
 
-    public static Member build(memberSignUpRequest signUpDto){
+    public static Member build(memberAuthRequest signUpDto){
         Member member = Member.builder()
                 .username(signUpDto.getUsername())
                 .password(signUpDto.getPassword())
